@@ -1,12 +1,14 @@
+
+    <!-- An unexamined life is not worth living. - Socrates -->
 <html>
     <!-- No surplus words or unnecessary actions. - Marcus Aurelius -->
 <div class="bantu mt-5"></div>
 <ul class="nav nav-tabs">
   <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="/admin/fasil">Fasilitas</a>
+    <a class="nav-link "  href="/admin/fasil">Fasilitas</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="/admin/buku">Buku</a>
+    <a class="nav-link active" href="/admin/buku" aria-current="page">Buku</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#">Link</a>
@@ -36,7 +38,7 @@
         <td><?= $n1['nama']; ?></td>
         <td><?= $n1['jenis']; ?></td>
         <td>
-            <a href="{{ route('detailfasil', ['id' => $n1['id']]) }}">Lihat Detail</a>
+            <a href="{{ route('detailbuku', ['id' => $n1['id']]) }}">Lihat Detail</a>
         </td>
     </tr>
     <?php $no++; ?>

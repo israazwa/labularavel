@@ -1,3 +1,5 @@
+<!-- Smile, breathe, and go slowly. - Thich Nhat Hanh -->
+<html>
 
     <!-- Walk as if you are kissing the Earth with your feet. - Thich Nhat Hanh -->
 
@@ -55,3 +57,6 @@
 
 
 </div>
+
+
+</html>

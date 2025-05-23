@@ -25,6 +25,7 @@ class ControllerUsersLaporanFasilitas extends Controller
         // dd($request->all());
         $fileName = null;
 
+
         if ($request->hasFile('foto')) {
             $foto = $request->file('foto');
             $fileName = uniqid() . '.' . $foto->getClientOriginalExtension();
@@ -84,4 +85,5 @@ class ControllerUsersLaporanFasilitas extends Controller
         $model->delete();
         return redirect('/admin/fasil')->with('success', 'Data berhasil dihapus!');
     }
+
 }

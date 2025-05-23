@@ -32,7 +32,7 @@ class ControllerUsersLaporanBuku extends Controller
         if ($request->hasFile('image')) {
             $image = $request->file('image'); // Pastikan sesuai dengan input form
             $fileName = uniqid() . '.' . $image->getClientOriginalExtension();
-            $image->storeAs('public/uploads/fasilitas', $fileName);
+            $image->move(public_path('/uploads/buku'), $fileName);
         }
 
         // Simpan ke database dengan input yang difilter
@@ -42,7 +42,7 @@ class ControllerUsersLaporanBuku extends Controller
             'jenis' => $request->input('jenis'),
             'buku' => $request->input('buku'),
             'masalah' => $request->input('masalah'),
-            'foto' => $fileName ? 'uploads/fasilitas/' . $fileName : null,
+            'foto' => $fileName ? 'uploads/buku/' . $fileName : null,
             'created_at' => now(),
             'created' => now(),
             'updated_at' => now(),

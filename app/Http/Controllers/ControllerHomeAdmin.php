@@ -21,7 +21,6 @@ class ControllerHomeAdmin extends Controller
         echo view('TemplateAdmin/Header', $data);
         echo view('Admin/Home', $data);
         return view('TemplateAdmin/Footer');
-
     }
 
     public function store(Request $request)
