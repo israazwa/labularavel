@@ -35,5 +35,8 @@ Route::get('/detailfasil/{id}', [ControllerAdminFasil::class, 'ingfoo'])->name('
 
 Route::get('/admin/buku', [ControllerAdminBuku::class, 'index']);
 Route::get('/detailbuku/{id}', [ControllerAdminBuku::class, 'ingfoo'])->name('detailbuku');
+Route::delete('/buku/delete/{id}', [ControllerAdminBuku::class, 'destroy'])->name('buku.destroy');
 
 Route::get('/admin/heropic', [ControllerHeroPic::class, 'index']);
+route::delete('/admin/heropic/delete/{id}', [ControllerHeroPic::class, 'delete']);
+route::post('/admin/heropic/store', [ControllerHeroPic::class, 'store']);

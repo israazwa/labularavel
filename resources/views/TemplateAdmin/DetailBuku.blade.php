@@ -38,7 +38,7 @@
         </div>
     </div>
     @foreach ($key as $item)
-    <form action="{{ url('/fasilitas/delete/' . $item->id) }}" method="POST" onsubmit="return confirm('Yakin ingin menghapus?');">
+    <form action="{{ url('/buku/delete/' . $item->id) }}" method="POST" onsubmit="return confirm('Yakin ingin menghapus?');">
         @csrf
         @method('DELETE')
         <button type="submit" class="btn btn-danger">Hapus</button>
@@ -48,6 +48,7 @@
         </div>
     <div class="col-6">
         <?php foreach($key as $data2): ?>
+        <div class="isigmb"></div>
         <img src="<?= asset($data2['foto']); ?>" alt="Foto" class="img-fluid">
         <?php endforeach; ?>
     </div>

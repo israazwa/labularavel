@@ -92,7 +92,7 @@
         <div class="full-view-container">
             <?php foreach ($dataset as $index => $image): ?>
             <div class="hero-image <?= $index === 0 ? 'active' : '' ?>"
-                style="background-image: url('<?= $image['content'] ?>');">
+             style="background-image: url('<?= asset('home/' . $image['content']); ?>');">
             </div>
             <?php endforeach; ?>
 

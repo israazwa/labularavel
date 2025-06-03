@@ -5,7 +5,6 @@
 </header>
 <div class="container-md">
     <form action="/laporan/fasilitas1" method="POST" enctype="multipart/form-data">
-@csrf
         <div id="emailAlert" class="alert alert-danger" style="display:none;"></div>
         <script>
             function validateEmail() {
@@ -22,6 +21,7 @@
         </script>
 
         <div class="card">
+            @csrf
             <div class="card-header">Form Laporan Fasilitas</div>
             <div class="card-body">
                 <div class="row mb-3">

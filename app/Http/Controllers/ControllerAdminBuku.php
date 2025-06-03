@@ -36,4 +36,17 @@ class ControllerAdminBuku extends Controller
         echo view('TemplateAdmin/DetailBuku', $data);
         return view('TemplateAdmin/footer');
     }
+    public function destroy($id)
+    {
+        $model = ModelUsersBuku::findOrFail($id);
+
+        // Hapus file gambar jika ada
+        if ($model->foto && file_exists(public_path('uploads/buku/' . $model->foto))) {
+            unlink(public_path('uploads/buku/' . $model->foto));
+        }
+
+        // Hapus data dari database
+        $model->delete();
+        return redirect('/admin/buku')->with('success', 'Data berhasil dihapus!');
+    }
 }
