@@ -5,11 +5,14 @@ use App\Http\Controllers\ControllerAdminBuku;
 use App\Http\Controllers\ControllerAdminFasil;
 use App\Http\Controllers\ControllerHeroPic;
 use App\Http\Controllers\ControllerHomeAdmin;
+use App\Http\Controllers\ControllerPengumuman;
 use App\Http\Controllers\ControllerUsersAbout;
+use App\Http\Controllers\ControllerUserSaran;
 use App\Http\Controllers\ControllerUsersHome;
 use App\Http\Controllers\ControllerUsersLaporanFasilitas;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ControllerUsersLaporanBuku;
+use App\Http\Controllers\ControllerUsersStatistik;
 
 Route::get('/debug', function () {
     return view('welcome');
@@ -33,6 +36,9 @@ Route::put('/ikhtisarupt/{id}', [ControllerHomeAdmin::class, 'update'])->name('i
 Route::get('/admin/fasil', [ControllerAdminFasil::class, 'index']);
 Route::get('/detailfasil/{id}', [ControllerAdminFasil::class, 'ingfoo'])->name('detailfasil');
 
+Route::get('/saran', [ControllerUserSaran::class, 'index']);
+route::post('/saran/kirim', [ControllerUserSaran::class, 'store'])->name('saran.store');
+
 Route::get('/admin/buku', [ControllerAdminBuku::class, 'index']);
 Route::get('/detailbuku/{id}', [ControllerAdminBuku::class, 'ingfoo'])->name('detailbuku');
 Route::delete('/buku/delete/{id}', [ControllerAdminBuku::class, 'destroy'])->name('buku.destroy');
@@ -40,3 +46,9 @@ Route::delete('/buku/delete/{id}', [ControllerAdminBuku::class, 'destroy'])->nam
 Route::get('/admin/heropic', [ControllerHeroPic::class, 'index']);
 route::delete('/admin/heropic/delete/{id}', [ControllerHeroPic::class, 'delete']);
 route::post('/admin/heropic/store', [ControllerHeroPic::class, 'store']);
+
+route::get('/admin/pengumuman', [ControllerPengumuman::class, 'index']);
+route::post('/admin/pengumuman/store', [ControllerPengumuman::class, 'store'])->name('pengumuman.store');
+route::delete('/admin/pengumuman/delete/{id}', [ControllerPengumuman::class, 'delete'])->name('pengumuman.delete');
+
+route::get('/stats', [ControllerUsersStatistik::class, 'index']);

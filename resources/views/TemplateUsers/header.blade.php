@@ -18,7 +18,7 @@
 <body>
     <nav class="navbar sticky-bottom navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand d-flex align-items-end" href="#" style="gap: 5px;">
+            <a class="navbar-brand d-flex align-items-end" href="/" style="gap: 5px;">
                 <img src="<?= url('logo.png'); ?>" alt="Logo" width="45" height="45" class="d-inline-block">
                 <div>
                     <b>Lapor <span>Bu</span></b>
@@ -37,7 +37,7 @@
                         <a class="nav-link" href="<?= url('/draflapor'); ?>">DaftarLaporan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= url('/laporan'); ?>">Laporkan!</a>
+                        <a class="nav-link" href="<?= url('/laporan/buku'); ?>">Laporkan!</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link disabled" href=" <?= url('/'); ?>" aria-disabled="true">Disabled</a>

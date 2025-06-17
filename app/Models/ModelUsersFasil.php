@@ -12,6 +12,6 @@ class ModelUsersFasil extends Model
 
     public function getAll()
     {
-        return $this->all();
+        return self::all();
     }
 }

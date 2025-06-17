@@ -8,7 +8,7 @@ class ModelPengumuman extends Model
 {
     protected $table = 'pengumumanadmin';
     protected $id = 'id';
-    protected $fillable = ['content', 'pj', 'cp', 'link', 'created'];
+    protected $fillable = ['content', 'pj', 'cp', 'link', 'created', 'tgl'];
 
     public static function getAll()
     {

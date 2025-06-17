@@ -1,10 +1,10 @@
 <header>
     <figure class="text-center">
         <blockquote class="blockquote">
-            <p>Maklum, manusia tempatnya salah dan dosa karena bukan Nabi boyyy!</p>
+            <p>Simplicity is an acquired taste.</p>
         </blockquote>
         <figcaption class="blockquote-footer">
-            Someone famous in <cite title="Source Title">Instagram</cite>
+            Someone famous in <cite title="Source Title">Laravel</cite>
         </figcaption>
     </figure>
 </header>

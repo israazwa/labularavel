@@ -87,7 +87,7 @@
             </a>
         </div>
         <div class="section">
-            <a href=""><img src="<?= url('logo.png'); ?>" alt="S##">
+            <a href="/saran"><img src="<?= url('logo.png'); ?>" alt="S##">
                 <div class="caption">Kritik dan/atau Saran</div>
             </a>
         </div>

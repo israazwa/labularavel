@@ -78,25 +78,26 @@
     }
 </style>
 
-<section>
-    <div class="full-view-container">
-        <?php foreach ($dataset as $index => $image): ?>
+<body>
+    <section>
+        <div class="full-view-container">
+            <?php foreach ($dataset as $index => $image): ?>
             <div class="hero-image <?= $index === 0 ? 'active' : '' ?>"
-                style="background-image: url('<?= $image['content'] ?>');">
+             style="background-image: url('<?= asset('home/' . $image['content']); ?>');">
             </div>
-        <?php endforeach; ?>
+            <?php endforeach; ?>
 
-        <svg class="svg-front" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="rgb(255, 255, 255)" fill-opacity="1"
-                d="M0,224L120,229.3C240,235,480,245,720,218.7C960,192,1200,128,1320,96L1440,64L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
-            </path>
-        </svg>
-        <div class="content">
-            <h1 class="h1"><b>LABU, Laporan Buku</b></h1>
-            <p class="h5">Laporan Umum Perpustakaan</p>
-            <a href="<?= url('/'); ?>"><button class="tombolLapor h5"><b>Home!</b></button></a>
+            <svg class="svg-front" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="rgb(255, 255, 255)" fill-opacity="1"
+                    d="M0,224L80,234.7C160,245,320,267,480,282.7C640,299,800,309,960,304C1120,299,1280,277,1360,266.7L1440,256L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
+                </path>
+            </svg>
+            <div class="content">
+                <h1 class="h1"><b>LABU, Laporan Buku</b></h1>
+                <p class="h5">Laporan Umum Perpustakaan</p>
+                <a href="<?= url('/about'); ?>"><button class="tombolLapor h5"><b>Laporkan!</b></button></a>
+            </div>
         </div>
-    </div>
     <script>
         const images = document.querySelectorAll('.hero-image');
         let currentIndex = 0;
@@ -109,6 +110,7 @@
         }, 7000); // Setiap 7 detik
     </script>
 </section>
+</body>
 
 
 
