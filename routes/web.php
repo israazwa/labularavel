@@ -52,3 +52,4 @@ route::post('/admin/pengumuman/store', [ControllerPengumuman::class, 'store'])->
 route::delete('/admin/pengumuman/delete/{id}', [ControllerPengumuman::class, 'delete'])->name('pengumuman.delete');
 
 route::get('/stats', [ControllerUsersStatistik::class, 'index']);
+Route::post('/stats/search', [ControllerUsersStatistik::class, 'search'])->name('stats.search');

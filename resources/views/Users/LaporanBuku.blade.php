@@ -1,5 +1,19 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 
+
+<div class="bantu mt-5 mb-2"
+><ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active"  href="/laporan/buku">Buku</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/laporan/fasilitas" aria-current="page">Fasilitas</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link " href="/saran">Kritik Saran</a>
+  </li>
+</ul>
+</div>
 <header class="fs-xl mb-2 text-center">
     <h2><b>FORM LAPORAN</b></h2>
 </header>

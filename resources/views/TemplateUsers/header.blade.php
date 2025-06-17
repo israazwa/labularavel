@@ -34,7 +34,7 @@
                         <a class="nav-link" aria-current="page" href="<?=url('/'); ?>">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= url('/draflapor'); ?>">DaftarLaporan</a>
+                        <a class="nav-link" href="<?= url('/stats'); ?>">DaftarLaporan</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?= url('/laporan/buku'); ?>">Laporkan!</a>
