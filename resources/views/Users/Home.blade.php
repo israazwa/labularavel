@@ -104,7 +104,7 @@
             <div class="content">
                 <h1 class="h1"><b>LABU, Laporan Buku</b></h1>
                 <p class="h5">Laporan Umum Perpustakaan</p>
-                <a href="<?= url('/about'); ?>"><button class="tombolLapor h5"><b>Laporkan!</b></button></a>
+                <a href="<?= url('/laporan/buku'); ?>"><button class="tombolLapor h5"><b>Laporkan!</b></button></a>
             </div>
         </div>
     </section>

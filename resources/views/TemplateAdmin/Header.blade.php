@@ -19,7 +19,7 @@
 <body>
     <nav class="navbar sticky-bottom navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand d-flex align-items-end" href="#" style="gap: 5px;">
+            <a class="navbar-brand d-flex align-items-end" href="/admin" style="gap: 5px;">
                 <img src="<?= url('logo.png'); ?>" alt="Logo" width="45" height="45" class="d-inline-block">
                 <div>
                     <b>Lapor <span>Bu</span></b>
@@ -32,13 +32,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="<?=url('/'); ?>">Home</a>
+                        <a class="nav-link" aria-current="page" href="<?=url('/admin'); ?>">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= url('/draflapor'); ?>">DaftarLaporan</a>
+                        <a class="nav-link" href="<?= url('/admin/buku'); ?>">Draft Laporan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= url('/laporan'); ?>">Laporkan!</a>
+                        <a class="nav-link" href="<?= url('/admin/pengumuman'); ?>">Pengumuman</a>
                     </li>
                     <li class="nav-item">
                         <form action="{{ route('logout') }}" method="POST">

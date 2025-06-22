@@ -33,8 +33,8 @@
 
     <footer class="text-center mt-4 py-3 bg-dark text-white">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        <p>&copy; 2025 IsraSaqiba || RavicennaMahardhika</p>
-        <a href="/admin"><i class="fab fa-laravel text-danger"></i></a>
+        <p>&copy; 2025 IsraSaqiba<a href="/admin"><i class="fab fa-laravel text-danger"></i></a> || RavicennaMahardhika </p>
+       
     </footer>
 </div>
 
