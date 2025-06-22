@@ -77,22 +77,22 @@
 <div class="container-fluid">
     <div class="rowC">
         <div class="section">
-            <a href="/laporan/buku"><img src="<?= url('logo.png'); ?>" alt="##">
+            <a href="/laporan/buku"><img src="<?= url('1.png'); ?>" alt="##">
                 <div class="caption">Draft Laporan Buku</div>
             </a>
         </div>
         <div class="section">
-            <a href="/laporan/fasilitas"><img src="<?= url('logo.png'); ?>" alt="###">
+            <a href="/laporan/fasilitas"><img src="<?= url('2.png'); ?>" alt="###">
                 <div class="caption">Draft Laporan Fasilitas</div>
             </a>
         </div>
         <div class="section">
-            <a href="/saran"><img src="<?= url('logo.png'); ?>" alt="S##">
+            <a href="/saran"><img src="<?= url('3.png'); ?>" alt="S##">
                 <div class="caption">Kritik dan/atau Saran</div>
             </a>
         </div>
         <div class="section">
-            <a href=""><img src="<?= url('logo.png'); ?>" alt="I#">
+            <a href="/stats"><img src="<?= url('4.png'); ?>" alt="I#">
                 <div class="caption">Statistik Laporan</div>
             </a>
         </div>

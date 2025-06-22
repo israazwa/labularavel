@@ -36,4 +36,17 @@ class ControllerAdminFasil extends Controller
         echo view('TemplateAdmin/DetailFasil', $data);
         return view('TemplateAdmin/footer');
     }
+    public function kirim(Request $request)
+    {
+        $validated = $request->validate([
+            'id' => 'required',
+            'content' => 'required',
+        ]);
+
+        $row = ModelUsersFasil::find($validated['id']);
+        $row->content = $validated['content'];
+        $row->save();
+
+        return redirect()->back()->with('success', 'Data berhasil diperbarui berdasarkan ID!');
+    }
 }

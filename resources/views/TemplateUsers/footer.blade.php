@@ -1,10 +1,11 @@
 <header>
     <figure class="text-center">
         <blockquote class="blockquote">
-            <p>Simplicity is an acquired taste.</p>
+            <p>Always remember that you are absolutely unique. Just like everyone else.</p>
         </blockquote>
         <figcaption class="blockquote-footer">
-            Someone famous in <cite title="Source Title">Laravel</cite>
+            Someone famous in Laravel <cite title="Source Title">Immanuel Kant
+</cite>
         </figcaption>
     </figure>
 </header>
@@ -31,7 +32,9 @@
     </div>
 
     <footer class="text-center mt-4 py-3 bg-dark text-white">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <p>&copy; 2025 IsraSaqiba || RavicennaMahardhika</p>
+        <a href="/admin"><i class="fab fa-laravel text-danger"></i></a>
     </footer>
 </div>
 

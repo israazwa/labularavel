@@ -60,7 +60,7 @@ class ControllerUsersStatistik extends Controller
         ));
         sort($allDates);
 
-        $keyword = ''; // Initialize keyword for search functionality
+        $keyword = '';
         $data = [
             'title' => 'Statistik Laporan Harian',
             'fasilitas' => $modelFasilitas,
@@ -86,8 +86,11 @@ class ControllerUsersStatistik extends Controller
             'email' => 'required|email',
         ]);
 
-        $hasilFs = ModelUsersFasil::where('email', $request->email)->firstOrFail();
-        $hasilBk = ModelUsersBuku::where('email', $request->email)->firstOrFail();
+        $hasilFs = ModelUsersFasil::where('email', $request->email)->first();
+        $hasilBk = ModelUsersBuku::where('email', $request->email)->first();
+        if (!$hasilFs && !$hasilBk) {
+            return redirect()->back()->with('alert', 'Data pengguna tidak ditemukan di tabel Fasil dan Buku.');
+        }
 
         return redirect()->back()->with([
             'hasilFs' => $hasilFs,

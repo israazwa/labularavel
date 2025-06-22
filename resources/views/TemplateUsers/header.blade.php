@@ -39,9 +39,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="<?= url('/laporan/buku'); ?>">Laporkan!</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href=" <?= url('/'); ?>" aria-disabled="true">Disabled</a>
-                    </li>
                 </ul>
             </div>
         </div>

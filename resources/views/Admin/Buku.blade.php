@@ -26,7 +26,7 @@
         <td>No.</td>
         <td>Email</td>
         <td>Nama</td>
-        <td>Masalah</td>
+        <td>Tanggal Up</td>
         <td>More</td>
     </tr>
   </thead>
@@ -36,7 +36,7 @@
         <td><?= $no; ?></td>
         <td><?= $n1['email']; ?></td>
         <td><?= $n1['nama']; ?></td>
-        <td><?= $n1['jenis']; ?></td>
+        <td><?= $n1['created_at']; ?></td>
         <td>
             <a href="{{ route('detailbuku', ['id' => $n1['id']]) }}">Lihat Detail</a>
         </td>

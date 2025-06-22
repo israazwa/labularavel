@@ -41,7 +41,10 @@
                         <a class="nav-link" href="<?= url('/laporan'); ?>">Laporkan!</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href=" <?= url('/'); ?>" aria-disabled="true">Disabled</a>
+                        <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button type="submit" class="btn btn-danger">Logout</button>
+                        </form>
                     </li>
                 </ul>
             </div>

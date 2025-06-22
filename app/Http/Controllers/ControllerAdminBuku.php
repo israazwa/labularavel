@@ -49,4 +49,18 @@ class ControllerAdminBuku extends Controller
         $model->delete();
         return redirect('/admin/buku')->with('success', 'Data berhasil dihapus!');
     }
+
+    public function aplot(Request $request)
+    {
+        $validated = $request->validate([
+            'id' => 'required',
+            'content' => 'required',
+        ]);
+
+        $row = ModelUsersBuku::find($validated['id']);
+        $row->content = $validated['content'];
+        $row->save();
+
+        return redirect()->back()->with('success', 'Data berhasil diperbarui berdasarkan ID!');
+    }
 }

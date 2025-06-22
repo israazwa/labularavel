@@ -2,6 +2,12 @@
     <!-- You must be the change you wish to see in the world. - Mahatma Gandhi -->
 </div>
 <div class="container mt-4">
+    @if (session('alert'))
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        {{ session('alert') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+@endif
 
     {{-- Form Pencarian --}}
     <div class="card">
@@ -29,26 +35,34 @@
 
         @if(session('hasilFs'))
             <div class="card mb-3">
-                <div class="card-header bg-success text-white">
+                <div class="card-header bg-info text-white">
                     Data Fasilitas
                 </div>
                 <div class="card-body">
                     <p><strong>Created At:</strong> {{ session('hasilFs')->created_at->format('d M Y, H:i') }}</p>
-                    <p><strong>Jenis : {{ session('hasilFs')->jenis }}</strong></p>
-                    <p><strong>Jenis : {{ session('hasilFs')->masalah }}</strong></p>
+                    <p><strong>Jenis         : {{ session('hasilFs')->jenis }}</strong></p>
+                    <p><strong>Balasan Admin : @if (session('hasilFs') && session('hasilFs')->content)
+                            {{ session('hasilFs')->content }}
+                        @else
+                    <p class="text-muted">Belum ada balasan dari admin.</p>
+                        @endif</strong></p>
                 </div>
             </div>
         @endif
 
         @if(session('hasilBk'))
             <div class="card mb-3">
-                <div class="card-header bg-primary text-white">
+                <div class="card-header bg-warning">
                     Data Buku
                 </div>
                 <div class="card-body">
                     <p><strong>Created At:</strong> {{ session('hasilBk')->created_at->format('d M Y, H:i') }}</p>
-                    <p><strong>Jenis : {{ session('hasilBk')->jenis }}</strong></p>
-                    <p><strong>Jenis : {{ session('hasilBk')->masalah }}</strong></p>
+                    <p><strong>Jenis         : {{ session('hasilBk')->jenis }}</strong></p>
+                    <p><strong>Balasan Admin : @if (session('hasilBk') && session('hasilBk')->content)
+                            {{ session('hasilBk')->content }}
+                        @else
+                    <p class="text-muted">Belum ada balasan dari admin.</p>
+                        @endif</strong></p>
                 </div>
             </div>
         @endif
