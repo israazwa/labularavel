@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ControllerUsersLaporanBuku;
 use App\Http\Controllers\ControllerUsersStatistik;
 use App\Http\Controllers\Admin\login;
+use App\Http\Controllers\ControllerAdminKritikSrn;
 use App\Http\Controllers\ControllerLoginMain;
 
 Route::get('/debug', function () {
@@ -36,6 +37,7 @@ Route::delete('/fasilitas/delete/{id}', [ControllerUsersLaporanFasilitas::class,
 
 Route::get('/admin', [ControllerHomeAdmin::class, 'index'])->middleware('auth');
 Route::put('/ikhtisarupt/{id}', [ControllerHomeAdmin::class, 'update'])->name('ikhtisar.update');
+route::get('/admin/saran', [ControllerAdminKritikSrn::class, 'index'])->name('admin.kritik')->middleware('auth');
 
 Route::get('/admin/fasil', [ControllerAdminFasil::class, 'index'])->middleware('auth');
 Route::get('/detailfasil/{id}', [ControllerAdminFasil::class, 'ingfoo'])->name('detailfasil');

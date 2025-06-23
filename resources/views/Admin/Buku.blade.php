@@ -5,13 +5,13 @@
 <div class="bantu mt-5"></div>
 <ul class="nav nav-tabs">
   <li class="nav-item">
-    <a class="nav-link "  href="/admin/fasil">Fasilitas</a>
+    <a class="nav-link active" aria-current="page" href="/admin/fasil">Fasilitas</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link active" href="/admin/buku" aria-current="page">Buku</a>
+    <a class="nav-link" href="/admin/buku">Buku</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="/admin/saran">KritikSaran</a>
   </li>
   <li class="nav-item">
     <a class="nav-link disabled" aria-disabled="true">Disabled</a>

@@ -9,7 +9,7 @@
     <a class="nav-link" href="/admin/buku">Buku</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="/admin/saran">KritikSaran</a>
   </li>
   <li class="nav-item">
     <a class="nav-link disabled" aria-disabled="true">Disabled</a>
