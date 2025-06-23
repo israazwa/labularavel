@@ -55,9 +55,9 @@
                 <div class="mb-3">
                     <select class="form-select" aria-label="Jenis Laporan" id="jenis" name="jenis" required>
                         <option value="" disabled selected>Pilih Jenis Laporan</option>
-                        <option>Fasilitas Rusak</option>
-                        <option>Laporan Kedua</option>
-                        <option>Laporan Ketiga</option>
+                        <option>Buku Rusak</option>
+                        <option>Buku Hilang</option>
+                        <option>Lainnya</option>
                     </select>
                 </div>
                 <div class="form-floating">
