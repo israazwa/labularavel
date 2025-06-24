@@ -15,10 +15,9 @@ class ControllerUsersLaporanFasilitas extends Controller
         $data = [
             'title' => "laporan fasilitas",
         ];
-        echo view('TemplateUsers/header', $data);
-        echo view('Users/LaporanFasilitas', $data);
-        echo view('TemplateUsers/footer');
-        return 0;
+        return view('TemplateUsers/header', $data) .
+            view('Users/LaporanFasilitas', $data) .
+            view('TemplateUsers/footer');
     }
     public function store(Request $request)
     {
@@ -69,7 +68,7 @@ class ControllerUsersLaporanFasilitas extends Controller
             'updated_at' => now(),
         ]);
 
-        return redirect()->back()->with('success', 'Data laporan berhasil diperbarui!');
+        return redirect()->back()->with('success', 'Data laporan berhasil diinput!');
     }
 
     public function destroy($id)

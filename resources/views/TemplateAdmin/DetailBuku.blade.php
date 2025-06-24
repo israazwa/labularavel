@@ -29,6 +29,11 @@
                 <li class="list-group-item">
                 <strong>Nama:</strong> {{ $fasil->nama }}
                 </li>
+                
+                <li class="list-group-item"><strong>Kode Buku :</strong>  <p class="mt-2 text-justify mb-0 text-danger fs-4">{{$fasil->kodebuku}}</p></li>
+              <li class="list-group-item"><strong>Tanggal Peminjaman :</strong>
+                <p class="mt-2 text-justify mb-0">{{$fasil->created_at}}</p></li>
+                
                 <li class="list-group-item">
                 <strong>Jenis Laporan:</strong> {{ $fasil->jenis }}
                 </li>
@@ -36,6 +41,7 @@
                 <strong>Permasalahan:</strong>
                 <p class="mt-2 text-justify mb-0">{{ $fasil->masalah }}</p>
                 </li>
+                
             @endforeach
             </ul>
         </div>

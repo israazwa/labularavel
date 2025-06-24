@@ -1,10 +1,11 @@
 <header>
     <figure class="text-center">
         <blockquote class="blockquote">
-            <p>Maklum, manusia tempatnya salah dan dosa karena bukan Nabi boyyy!</p>
+            <p class="text-danger">Pastikan Sebelum melakukan CRUD data-data telah terverifikasi</p>
         </blockquote>
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <figcaption class="blockquote-footer">
-            Someone famous in <cite title="Source Title">Instagram</cite>
+            <i class="fab fa-laravel text-danger"></i> <cite title="Source Title">Labu Larvel</cite>
         </figcaption>
     </figure>
 </header>

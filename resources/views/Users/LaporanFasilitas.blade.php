@@ -37,6 +37,12 @@
         <div class="card">
             @csrf
             <div class="card-header">Form Laporan Fasilitas</div>
+            @if(session('success'))
+  <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+    {{ session('success') }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Tutup"></button>
+  </div>
+@endif
             <div class="card-body">
                 <div class="row mb-3">
                     <div class="col-6">

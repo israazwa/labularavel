@@ -1,22 +1,36 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 
-
-<div class="bantu mt-5 mb-2"
-><ul class="nav nav-tabs">
-  <li class="nav-item">
-    <a class="nav-link active"  href="/laporan/buku">Buku</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/laporan/fasilitas" aria-current="page">Fasilitas</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link " href="/saran">Kritik Saran</a>
-  </li>
-</ul>
+{{-- /cari --}}
+<div class="bantu mt-5 mb-2">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active"  href="/laporan/buku">Buku</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/laporan/fasilitas" aria-current="page">Fasilitas</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="/saran">Kritik Saran</a>
+        </li>
+    </ul>
 </div>
 <header class="fs-xl mb-2 text-center">
     <h2><b>FORM LAPORAN</b></h2>
 </header>
+
+<div class="container mx-3 mb-2">
+    <form action="/cari" method="POST" enctype="multipart/form-data">
+    @csrf
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email">
+        </div>
+        <button type="submit" class="tombolKirim"><b>Kirim Laporan</b></button>
+    </form>
+</div>
+
+@if(session('success'))
+
 <div class="container-md">
     <form action="/laporan/buku/kirim" method="post"  enctype="multipart/form-data">
         @csrf
@@ -37,28 +51,39 @@
 
         <div class="card">
             <div class="card-header">Form Laporan Buku</div>
+
             <div class="card-body">
                 <div class="row mb-3">
                     <div class="col-6">
                         <div class="form-floating">
-                            <input type="email" class="form-control" id="email" name="email" required placeholder="name@example.com">
-                            <label for="floatingInput">Email address</label>
+                            <input type="email" class="form-control" id="email" name="email" required placeholder="name@example.com" value="{{session('email')}}" readonly>
+                            <label for="floatingInput">Email</label>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="form-floating">
-                            <input type="text" class="form-control" id="nama" name="nama" required placeholder="username">
+                            <input type="text" class="form-control" id="nama" name="nama" required placeholder="username" value="{{ session('nama') }}" readonly>
                             <label for="floatingInput">Username</label>
                         </div>
                     </div>
                 </div>
-                <div class="mb-3">
-                    <select class="form-select" aria-label="Jenis Laporan" id="jenis" name="jenis" required>
+                <div class="mb-3 d-flex">
+
+                    <div class="input-group mb-3">
+                     <select class="form-select" aria-label="Jenis Laporan" id="jenis" name="jenis" required>
                         <option value="" disabled selected>Pilih Jenis Laporan</option>
                         <option>Buku Rusak</option>
                         <option>Buku Hilang</option>
                         <option>Lainnya</option>
                     </select>
+                    <span class="input-group-text">||</span>
+                    <select class="form-select" aria-label="Jenis Laporan" id="jenis" name="kdbo" required>
+                        <option value="" disabled selected>Pilih Buku</option>
+                      <?php foreach(session('buku', []) as $kdb): ?>
+                        <option><?= $kdb; ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
                 </div>
                 <div class="form-floating">
                     <textarea class="form-control" placeholder="Masalah" style="height: 100px" id="masalah" name="masalah" rows="3" required></textarea>
@@ -75,6 +100,13 @@
         </div>
     </form>
 </div>
+@elseif (session('alert'))
+<div class="container mx-3">
+    <div class="alert alert-danger">
+        {{ session('alert') }}
+    </div>
+</div>
+@endif
 
 <style>
     .tombolKirim {

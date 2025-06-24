@@ -8,7 +8,7 @@ class ModelUsersBuku extends Model
 {
     protected $table = 'laporanbuku';
     protected $id = 'id';
-    protected $fillable = ['email', 'nama', 'jenis', 'content', 'created', 'confirm', 'foto', 'masalah', 'id'];
+    protected $fillable = ['email', 'nama', 'jenis', 'content', 'created', 'confirm', 'foto', 'masalah', 'id', 'kodebuku'];
     public $timestamps = true;
 
     public static function getAll()

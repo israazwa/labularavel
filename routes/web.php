@@ -27,6 +27,7 @@ Route::get('/about', [ControllerUsersAbout::class, 'index']);
 
 Route::get('/laporan/buku', [ControllerUsersLaporanBuku::class, 'index'])->name('laporanbuku');
 Route::POST('/laporan/buku/kirim', [ControllerUsersLaporanBuku::class, 'store']);
+route::POST('/cari', [ControllerUsersLaporanBuku::class, 'cari'])->name('cari');
 
 
 Route::get('/laporan/fasilitas', [ControllerUsersLaporanFasilitas::class, 'index']);

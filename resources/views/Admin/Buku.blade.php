@@ -5,10 +5,10 @@
 <div class="bantu mt-5"></div>
 <ul class="nav nav-tabs">
   <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="/admin/fasil">Fasilitas</a>
+    <a class="nav-link " aria-current="page" href="/admin/fasil">Fasilitas</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="/admin/buku">Buku</a>
+    <a class="nav-link active" href="/admin/buku">Buku</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="/admin/saran">KritikSaran</a>
@@ -26,6 +26,7 @@
         <td>No.</td>
         <td>Email</td>
         <td>Nama</td>
+        <td>Kode Buku</td>
         <td>Tanggal Up</td>
         <td>More</td>
     </tr>
@@ -36,6 +37,7 @@
         <td><?= $no; ?></td>
         <td><?= $n1['email']; ?></td>
         <td><?= $n1['nama']; ?></td>
+        <td><?= $n1['kodebuku']; ?></td>
         <td><?= $n1['created_at']; ?></td>
         <td>
             <a href="{{ route('detailbuku', ['id' => $n1['id']]) }}">Lihat Detail</a>
